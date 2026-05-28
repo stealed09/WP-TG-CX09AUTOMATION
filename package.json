@@ -1,0 +1,28 @@
+{
+  "name": "telegram-monitor-saas",
+  "version": "1.0.0",
+  "description": "Production-Ready Telegram Monitoring SaaS",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "pm2": "pm2 start ecosystem.config.js --env production"
+  },
+  "dependencies": {
+    "telegraf": "^4.15.3",
+    "telegram": "^2.19.6",
+    "@whiskeysockets/baileys": "^6.7.8",
+    "dotenv": "^16.3.1",
+    "qrcode": "^1.5.3",
+    "pino": "^8.15.0",
+    "node-cron": "^3.0.3",
+    "axios": "^1.5.0",
+    "async-mutex": "^0.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
