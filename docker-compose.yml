@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  telegram-monitor:
+    build: .
+    container_name: telegram-monitor
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+    environment:
+      - NODE_ENV=production
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
